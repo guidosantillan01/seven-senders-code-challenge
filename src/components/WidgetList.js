@@ -2,12 +2,12 @@ import React from 'react';
 
 import WidgetItem from './WidgetItem';
 
-const WidgetList = () => {
+const WidgetList = ({ widgets }) => {
   return (
     <div>
-      <h2>This is the widget list</h2>
-      <WidgetItem />
-      <WidgetItem />
+      {widgets.map(widget => {
+        return <WidgetItem name={widget.name} language={widget.language} />;
+      })}
     </div>
   );
 };

@@ -2,14 +2,14 @@ import React from 'react';
 
 import DeleteButton from './DeleteButton';
 
-const WidgetItem = () => {
+const WidgetItem = ({ name, language }) => {
   return (
     <div>
       <h4>Name</h4>
-      <p>Weather Widget</p>
+      <p>{name}</p>
 
       <h4>Language</h4>
-      <p>English</p>
+      <p>{language}</p>
 
       <DeleteButton />
     </div>

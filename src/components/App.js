@@ -7,14 +7,38 @@ import CreateWidget from './CreateWidget';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      widgets: [
+        { name: 'Widget 1', language: 'English' },
+        { name: 'Widget 2', language: 'Spanish' },
+        { name: 'Widget 3', language: 'German' }
+      ]
+    };
+  }
+
+  componentDidMount() {}
+
   render() {
+    const { widgets } = this.state;
+
     return (
       <Router>
         <div className="App">
-          <h1>Widgets App</h1>
+          <h1>Seven Senders - Widget App</h1>
           <div>
-            <Route exact path="/" component={Main} />
-            <Route exact path="/create-widget" component={CreateWidget} />
+            <Route
+              exact
+              path="/"
+              render={props => <Main {...props} widgets={widgets} />}
+            />
+            <Route
+              exact
+              path="/create-widget"
+              render={props => <CreateWidget {...props} widgets={widgets} />}
+            />
           </div>
         </div>
       </Router>
