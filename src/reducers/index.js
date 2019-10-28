@@ -1,13 +1,13 @@
 import { ADD_WIDGET, DELETE_WIDGET } from '../actions/types';
 
-const initialState = [
+const INITIAL_STATE = [
   {
     name: '',
     language: ''
   }
 ];
 
-const widgetsReducer = (state = initialState, action) => {
+export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ADD_WIDGET:
       return [
@@ -24,5 +24,3 @@ const widgetsReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-export default widgetsReducer;

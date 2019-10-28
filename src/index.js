@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import configureStore from './configureStore';
 
+import * as serviceWorker from './serviceWorker';
 import './index.css';
 
 const store = configureStore();
@@ -14,8 +15,6 @@ const jsx = (
     <App />
   </Provider>
 );
-
-import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(jsx, document.getElementById('root'));
 
