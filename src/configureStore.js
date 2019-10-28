@@ -2,10 +2,15 @@ import { createStore } from 'redux';
 
 import reducers from './reducers';
 
+const INITIAL_STATE = {
+  widgets: [],
+  showModal: false
+};
+
 export default () => {
   const persistedState = localStorage.getItem('widgetApp')
     ? JSON.parse(localStorage.getItem('widgetApp'))
-    : undefined;
+    : INITIAL_STATE;
 
   const store = createStore(
     reducers,
