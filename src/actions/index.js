@@ -2,7 +2,7 @@ import uuidv4 from 'uuid/v4';
 
 import { ADD_WIDGET, DELETE_WIDGET } from './types';
 
-export const addWidget = widget => ({
+export const addWidget = (widget = { name: '', language: '' }) => ({
   type: ADD_WIDGET,
   payload: {
     ...widget,

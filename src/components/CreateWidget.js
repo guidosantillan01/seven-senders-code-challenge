@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { addWidget } from '../actions';
 
+import style from './CreateWidget.module.scss';
+
 class CreateWidget extends Component {
   handleCreateWidget = e => {
     e.preventDefault();
@@ -17,14 +19,16 @@ class CreateWidget extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleCreateWidget}>
-          <label>
+        <form onSubmit={this.handleCreateWidget} className={style.container}>
+          <label className={style.item}>
             Widget name: <input name="name" />
           </label>
-          <label>
+          <label className={style.item}>
             Language: <input name="language" />
           </label>
-          <button type="submit">Add</button>
+          <button type="submit" className={style.addButton}>
+            Add widget
+          </button>
         </form>
       </div>
     );
