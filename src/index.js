@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 
 import App from './components/App';
 import configureStore from './configureStore';
+import { saveState } from './localStorage';
 
 import * as serviceWorker from './serviceWorker';
 import './index.css';
@@ -15,6 +16,10 @@ const jsx = (
     <App />
   </Provider>
 );
+
+store.subscribe(() => {
+  saveState(store.getState());
+});
 
 ReactDOM.render(jsx, document.getElementById('root'));
 
