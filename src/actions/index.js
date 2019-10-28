@@ -6,7 +6,9 @@ import {
   OPEN_MODAL,
   CLOSE_MODAL,
   ADD_LANGUAGE,
-  ADD_NAME
+  ADD_NAME,
+  SHOW_ERROR,
+  HIDE_ERROR
 } from './types';
 
 export const addWidget = (widget = { name: '', language: '' }) => ({
@@ -46,4 +48,14 @@ export const addLanguage = ({ id = '', language = '' }) => ({
     id,
     language
   }
+});
+
+export const showError = () => ({
+  type: SHOW_ERROR,
+  payload: { showError: true }
+});
+
+export const hideError = () => ({
+  type: HIDE_ERROR,
+  payload: { showError: false }
 });

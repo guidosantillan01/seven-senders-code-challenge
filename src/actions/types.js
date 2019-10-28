@@ -5,3 +5,6 @@ export const CLOSE_MODAL = 'CLOSE_MODAL';
 
 export const ADD_NAME = 'ADD_NAME';
 export const ADD_LANGUAGE = 'ADD_LANGUAGE';
+
+export const SHOW_ERROR = 'SHOW_ERROR';
+export const HIDE_ERROR = 'HIDE_ERROR';

@@ -4,7 +4,8 @@ import reducers from './reducers';
 
 const INITIAL_STATE = {
   widgets: [],
-  showModal: false
+  showModal: false,
+  showError: false
 };
 
 export default () => {

@@ -4,12 +4,15 @@ import {
   OPEN_MODAL,
   CLOSE_MODAL,
   ADD_NAME,
-  ADD_LANGUAGE
+  ADD_LANGUAGE,
+  SHOW_ERROR,
+  HIDE_ERROR
 } from '../actions/types';
 
 const INITIAL_STATE = {
   widgets: [],
-  showModal: false
+  showModal: false,
+  showError: false
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -32,10 +35,6 @@ export default (state = INITIAL_STATE, action) => {
         widgets: state.widgets.filter(({ id }) => id !== action.payload.id)
       };
     case OPEN_MODAL:
-      return {
-        ...state,
-        showModal: action.payload.showModal
-      };
     case CLOSE_MODAL:
       return {
         ...state,
@@ -65,6 +64,12 @@ export default (state = INITIAL_STATE, action) => {
           }
           return widget;
         })
+      };
+    case SHOW_ERROR:
+    case HIDE_ERROR:
+      return {
+        ...state,
+        showError: action.payload.showError
       };
     default:
       return state;
