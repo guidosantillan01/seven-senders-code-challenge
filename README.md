@@ -27,3 +27,9 @@ npm install
 ```sh
 npm start
 ```
+
+## Things to Improve
+
+- Add more test cases
+- Add form validation
+- Add modal confirmation
