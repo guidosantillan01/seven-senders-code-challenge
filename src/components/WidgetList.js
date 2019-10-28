@@ -6,7 +6,13 @@ const WidgetList = ({ widgets }) => {
   return (
     <div>
       {widgets.map(widget => {
-        return <WidgetItem name={widget.name} language={widget.language} />;
+        return (
+          <WidgetItem
+            name={widget.name}
+            language={widget.language}
+            key={widget.name}
+          />
+        );
       })}
     </div>
   );

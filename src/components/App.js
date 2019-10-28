@@ -21,6 +21,24 @@ class App extends Component {
 
   componentDidMount() {}
 
+  handleCreateWidget = (e, value) => {
+    e.preventDefault();
+    // console.log(e.target.value);
+    // console.log(value);
+    // this.setState({ widgets: { ...value } });
+  };
+
+  handleNameChange = e => {
+    const name = e.target.value;
+    // this.setState(() => (this.state.widgets{}))
+    console.log(name);
+  };
+
+  handleLanguageChange = e => {
+    const language = e.target.value;
+    console.log(language);
+  };
+
   render() {
     const { widgets } = this.state;
 
@@ -37,7 +55,14 @@ class App extends Component {
             <Route
               exact
               path="/create-widget"
-              render={props => <CreateWidget {...props} widgets={widgets} />}
+              render={props => (
+                <CreateWidget
+                  {...props}
+                  handleCreateWidget={this.handleCreateWidget}
+                  handleNameChange={this.handleNameChange}
+                  handleLanguageChange={this.handleLanguageChange}
+                />
+              )}
             />
           </div>
         </div>
