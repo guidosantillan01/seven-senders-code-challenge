@@ -26,8 +26,8 @@ const WidgetList = ({ widgets = [] }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  widgets: state
+const mapStateToProps = ({ widgets }) => ({
+  widgets
 });
 
 export default connect(mapStateToProps)(WidgetList);

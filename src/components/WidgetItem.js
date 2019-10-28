@@ -1,6 +1,7 @@
 import React from 'react';
 
-import DeleteButton from './DeleteButton';
+import DeleteConfirmationModal from './DeleteConfirmationModal';
+
 import styles from './styles/WidgetItem.module.scss';
 
 const WidgetItem = ({ name, language, id }) => {
@@ -12,7 +13,7 @@ const WidgetItem = ({ name, language, id }) => {
       <h4>Language</h4>
       <p>{language}</p>
 
-      <DeleteButton id={id} />
+      <DeleteConfirmationModal id={id} />
     </div>
   );
 };
