@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 
 import WidgetItem from './WidgetItem';
 
+import styles from './WidgetList.module.scss';
+
 const WidgetList = ({ widgets = [] }) => {
   return (
-    <div>
+    <div className={styles.list}>
       {widgets.length !== 0 ? (
         widgets.map(widget => {
           return (

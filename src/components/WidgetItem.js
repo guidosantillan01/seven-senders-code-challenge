@@ -1,10 +1,11 @@
 import React from 'react';
 
 import DeleteButton from './DeleteButton';
+import styles from './WidgetItem.module.scss';
 
 const WidgetItem = ({ name, language, id }) => {
   return (
-    <div>
+    <div className={styles.item}>
       <h4>Name</h4>
       <p>{name}</p>
 

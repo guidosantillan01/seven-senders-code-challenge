@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Main from './Main';
 import CreateWidget from './CreateWidget';
 
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   constructor(props) {
