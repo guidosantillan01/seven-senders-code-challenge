@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { deleteWidget } from '../actions';
 
-import style from './Button.module.scss';
+import style from './styles/Button.module.scss';
 
 const DeleteButton = ({ dispatch, id }) => {
   return (

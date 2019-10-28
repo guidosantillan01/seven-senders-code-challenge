@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { addWidget } from '../actions';
 
-import style from './CreateWidget.module.scss';
+import style from './styles/CreateWidget.module.scss';
 
 class CreateWidget extends Component {
   handleCreateWidget = e => {

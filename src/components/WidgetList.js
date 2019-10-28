@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import WidgetItem from './WidgetItem';
 
-import styles from './WidgetList.module.scss';
+import styles from './styles/WidgetList.module.scss';
 
 const WidgetList = ({ widgets = [] }) => {
   return (

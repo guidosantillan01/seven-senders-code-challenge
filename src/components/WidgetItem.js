@@ -1,7 +1,7 @@
 import React from 'react';
 
 import DeleteButton from './DeleteButton';
-import styles from './WidgetItem.module.scss';
+import styles from './styles/WidgetItem.module.scss';
 
 const WidgetItem = ({ name, language, id }) => {
   return (

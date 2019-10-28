@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Main from './Main';
 import CreateWidget from './CreateWidget';
 
-import style from './App.module.scss';
+import style from './styles/App.module.scss';
 
 const App = () => {
   return (
