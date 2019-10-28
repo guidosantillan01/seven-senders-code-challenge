@@ -1,10 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
+
+import style from './Button.module.scss';
 
 const AddButton = () => {
   return (
     <Link to="/create-widget">
-      <button>Add Widget</button>
+      <button className={style.add}>Add Widget</button>
     </Link>
   );
 };
