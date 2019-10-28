@@ -15,7 +15,7 @@ const WidgetList = ({ widgets = [] }) => {
               name={widget.name}
               language={widget.language}
               id={widget.id}
-              key={widget.name}
+              key={widget.id}
             />
           );
         })
