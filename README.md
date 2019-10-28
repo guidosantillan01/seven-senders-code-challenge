@@ -30,6 +30,5 @@ npm start
 
 ## Things to Improve
 
-- Add more test cases
-- Add form validation
-- Add modal confirmation
+- Add test cases
+- Improve overall design
