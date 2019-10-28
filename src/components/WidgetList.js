@@ -1,9 +1,9 @@
+import styles from './styles/WidgetList.module.scss';
+
 import React from 'react';
 import { connect } from 'react-redux';
 
 import WidgetItem from './WidgetItem';
-
-import styles from './styles/WidgetList.module.scss';
 
 const WidgetList = ({ widgets = [] }) => {
   return (

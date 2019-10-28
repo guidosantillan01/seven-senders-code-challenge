@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import uuidv4 from 'uuid/v4';
 
-import { addName, showError, hideError } from '../actions';
 import ErrorForm from './ErrorForm';
+import { addName, showError, hideError } from '../actions';
 
 class ValidateName extends Component {
   handleName = e => {

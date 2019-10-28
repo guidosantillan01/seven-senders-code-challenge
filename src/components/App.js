@@ -4,7 +4,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Main from './Main';
-import CreateWidget from './CreateWidget';
 import ValidateName from './ValidateName';
 import ValidateLanguage from './ValidateLanguage';
 
@@ -17,7 +16,6 @@ const App = () => {
         </Link>
         <div>
           <Route exact path="/" component={Main} />
-          <Route exact path="/create-widget" component={CreateWidget} />
           <Route exact path="/add-name" component={ValidateName} />
           <Route exact path="/add-language/:id" component={ValidateLanguage} />
         </div>

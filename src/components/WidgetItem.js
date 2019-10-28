@@ -1,8 +1,8 @@
+import styles from './styles/WidgetItem.module.scss';
+
 import React from 'react';
 
 import DeleteConfirmationModal from './DeleteConfirmationModal';
-
-import styles from './styles/WidgetItem.module.scss';
 
 const WidgetItem = ({ name, language, id }) => {
   return (

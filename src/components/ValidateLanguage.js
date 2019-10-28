@@ -1,10 +1,10 @@
+import style from './styles/CreateWidget.module.scss';
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { addLanguage, showError, hideError } from '../actions';
 import ErrorForm from './ErrorForm';
-
-import style from './styles/CreateWidget.module.scss';
 
 class ValidateLanguage extends Component {
   handleLanguage = e => {
@@ -25,7 +25,8 @@ class ValidateLanguage extends Component {
       <div>
         <form onSubmit={this.handleLanguage} className={style.container}>
           <label className={style.item}>
-            What is the widget's language? <input name="language" />
+            What is the widget's language?
+            <input name="language" />
           </label>
           {this.props.showError && <ErrorForm />}
           <button type="submit" className={style.addButton}>
