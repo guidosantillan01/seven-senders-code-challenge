@@ -1,7 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const DeleteButton = () => {
-  return <button>Delete</button>;
+import { deleteWidget } from '../actions';
+
+const DeleteButton = ({ dispatch, id }) => {
+  return (
+    <button
+      onClick={() => {
+        dispatch(deleteWidget(id));
+      }}
+    >
+      Delete
+    </button>
+  );
 };
 
-export default DeleteButton;
+export default connect()(DeleteButton);

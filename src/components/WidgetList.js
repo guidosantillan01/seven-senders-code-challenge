@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import WidgetItem from './WidgetItem';
 
@@ -11,6 +12,7 @@ const WidgetList = ({ widgets = [] }) => {
             <WidgetItem
               name={widget.name}
               language={widget.language}
+              id={widget.id}
               key={widget.name}
             />
           );
@@ -22,4 +24,8 @@ const WidgetList = ({ widgets = [] }) => {
   );
 };
 
-export default WidgetList;
+const mapStateToProps = state => ({
+  widgets: state
+});
+
+export default connect(mapStateToProps)(WidgetList);

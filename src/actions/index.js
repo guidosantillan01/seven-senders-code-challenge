@@ -12,5 +12,5 @@ export const addWidget = widget => ({
 
 export const deleteWidget = id => ({
   type: DELETE_WIDGET,
-  payload: id
+  payload: { id }
 });

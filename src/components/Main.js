@@ -3,11 +3,11 @@ import React from 'react';
 import WidgetList from './WidgetList';
 import AddButton from './AddButton';
 
-const Main = ({ widgets }) => {
+const Main = () => {
   return (
     <div>
       <AddButton />
-      <WidgetList widgets={widgets} />
+      <WidgetList />
     </div>
   );
 };
