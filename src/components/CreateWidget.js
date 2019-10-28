@@ -11,6 +11,7 @@ class CreateWidget extends Component {
       language: e.target['language'].value
     };
     this.props.dispatch(addWidget(widget));
+    this.props.history.push('/');
   };
 
   render() {
