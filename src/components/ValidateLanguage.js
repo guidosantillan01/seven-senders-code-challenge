@@ -26,7 +26,11 @@ class ValidateLanguage extends Component {
         <form onSubmit={this.handleLanguage} className={style.container}>
           <label className={style.item}>
             What is the widget's language?
-            <input name="language" />
+            <select name="language">
+              <option value="ENG">ENG</option>
+              <option value="ES">ES</option>
+              <option value="DE">DE</option>
+            </select>
           </label>
           {this.props.showError && <ErrorForm />}
           <button type="submit" className={style.addButton}>
