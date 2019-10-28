@@ -1,9 +1,12 @@
+import uuidv4 from 'uuid/v4';
+
 import { ADD_WIDGET, DELETE_WIDGET } from './types';
 
 export const addWidget = widget => ({
   type: ADD_WIDGET,
   payload: {
-    ...widget
+    ...widget,
+    id: uuidv4()
   }
 });
 

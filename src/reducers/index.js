@@ -13,6 +13,7 @@ const widgetsReducer = (state = initialState, action) => {
       return [
         ...state,
         {
+          id: action.payload.id,
           name: action.payload.name,
           language: action.payload.language
         }
