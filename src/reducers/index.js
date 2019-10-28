@@ -2,7 +2,9 @@ import {
   ADD_WIDGET,
   DELETE_WIDGET,
   OPEN_MODAL,
-  CLOSE_MODAL
+  CLOSE_MODAL,
+  ADD_NAME,
+  ADD_LANGUAGE
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -38,6 +40,31 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         showModal: action.payload.showModal
+      };
+    case ADD_NAME:
+      return {
+        ...state,
+        widgets: [
+          ...state.widgets,
+          {
+            id: action.payload.id,
+            name: action.payload.name,
+            language: ''
+          }
+        ]
+      };
+    case ADD_LANGUAGE:
+      return {
+        ...state,
+        widgets: state.widgets.map(widget => {
+          if (widget.id === action.payload.id) {
+            return {
+              ...widget,
+              language: action.payload.language
+            };
+          }
+          return widget;
+        })
       };
     default:
       return state;

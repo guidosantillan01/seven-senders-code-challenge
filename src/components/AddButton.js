@@ -5,7 +5,7 @@ import style from './styles/Button.module.scss';
 
 const AddButton = () => {
   return (
-    <Link to="/create-widget">
+    <Link to="/add-name">
       <button className={style.add}>Add Widget</button>
     </Link>
   );
